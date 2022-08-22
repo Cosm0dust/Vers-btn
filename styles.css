@@ -69,12 +69,18 @@ img {
   vertical-align: top;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: inherit;
-  font-weight: 400;
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-/*--------------------*/
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .item-info__text_h2, .item-info__text_h1, .container__title::before {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -129,12 +135,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 10%;
   height: 114px;
   left: calc(50% - 172px + 4px);
-  top: calc(50% - 57px - 975.5px);
+  top: calc(50% - 57px - 975px);
   text-align: center;
   letter-spacing: -0.03em;
 }
 @media (min-width: 767px) {
   .container__title::before {
+    position: absolute;
     height: 202px;
     width: 471px;
     left: 1px;
@@ -250,7 +257,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 313px;
   width: 100%;
   left: 0px;
-  top: 0.49px;
+  top: 0.5px;
   background: url(png/img_4.png) 5% 30%/cover no-repeat;
   border-radius: 20px;
 }
@@ -271,7 +278,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 313px;
   width: 100%;
   left: 0px;
-  top: 0.49px;
+  top: 0.5px;
   background: url(png/img_2.png) 5% 30%/cover no-repeat;
   border-radius: 20px;
 }
@@ -292,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 313px;
   width: 100%;
   left: 0px;
-  top: 0.49px;
+  top: 0.5px;
   background: url(png/img_1.png) 5% 30%/cover no-repeat;
   border-radius: 20px;
 }
@@ -313,7 +320,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 313px;
   width: 100%;
   left: 0px;
-  top: 0.49px;
+  top: 0.5px;
   background: url(png/img_3.png) 5% 30%/cover no-repeat;
   border-radius: 20px;
 }
@@ -419,9 +426,9 @@ h1, h2, h3, h4, h5, h6 {
   .item-info__text_h2-large {
     position: absolute;
     left: 0;
-    right: 53.9%;
-    top: 119.08%;
-    bottom: -32.89%;
+    right: 54%;
+    top: 119%;
+    bottom: -33%;
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -440,13 +447,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 .item-info__wider-block {
   position: absolute;
-  left: 71.51%;
-  right: 9.3%;
-  top: 78.33%;
-  bottom: 4.44%;
+  left: 72%;
+  right: 9%;
+  top: 78%;
+  bottom: 4%;
   background: transparent;
   height: 1px;
-  width: 164.3px;
+  width: 170.5px;
 }
 @media (min-width: 676px) {
   .item-info__wider-block {
@@ -462,10 +469,10 @@ h1, h2, h3, h4, h5, h6 {
   .item-info__wider-block {
     display: block;
     position: absolute;
-    left: 68.87%;
-    right: 16.79%;
-    top: 40.86%;
-    bottom: 22.7%;
+    left: 69%;
+    right: 17%;
+    top: 41%;
+    bottom: 23%;
     background: transparent;
     height: 1px;
     width: 310px;
@@ -478,10 +485,10 @@ h1, h2, h3, h4, h5, h6 {
   .item-info__btn {
     display: block;
     position: absolute;
-    left: 68.87%;
-    right: 16.79%;
-    top: 60.86%;
-    bottom: 22.7%;
+    left: 69%;
+    right: 17%;
+    top: 61%;
+    bottom: 23%;
   }
 }
 .item-info__btn-m {
@@ -502,10 +509,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .item-info__btn-s {
   position: absolute;
-  left: 71.51%;
-  right: 9.3%;
-  top: 78.33%;
-  bottom: 4.44%;
+  left: 72%;
+  right: 9%;
+  top: 78%;
+  bottom: 4%;
   width: 66px;
 }
 @media (min-width: 767px) {
@@ -551,15 +558,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-}
-.btn:hover {
-  width: 155px;
-  transition: width 0.25s ease-in-out;
-}
-@media (min-width: 767px) {
-  .btn:hover {
-    width: 310px;
-  }
 }
 .btn svg {
   position: absolute;
@@ -626,7 +624,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-s:after {
   content: "";
   height: 66px;
-  width: 164.3px;
+  width: 170.5px;
   position: absolute;
   transform: translateX(-100%);
   background: linear-gradient(58.96deg, #3458e4 4.09%, #af85ee 45.33%, #f59ada 67.93%, #ffc1ce 103.29%);
@@ -649,7 +647,7 @@ h1, h2, h3, h4, h5, h6 {
   mask-composite: exclude;
 }
 .btn-s:hover {
-  width: 164.3px;
+  width: 170.5px;
   transition: width 0.25s ease-in-out;
 }
 .btn-s svg {
@@ -740,7 +738,7 @@ h1, h2, h3, h4, h5, h6 {
   mask-composite: exclude;
 }
 .btn-m:hover {
-  width: 186px;
+  width: 195.3px;
   transition: width 0.25s ease-in-out;
 }
 .btn-m svg {

@@ -1,6 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-@import "nullstyle";
 
+
+/*Обнуление*/
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+html{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body
+{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 %font{
   font-family: 'Inter', sans-serif;
@@ -14,7 +62,7 @@
 @mixin img($img){
   position: absolute;
   @include hw(313px, 100%);
-  @include left-top(0px, 0.49px);
+  @include left-top(0px, 0.5px);
   background: $img 5% 30%/ cover no-repeat;
   border-radius: 20px;
 
@@ -78,13 +126,14 @@
       position: absolute;
       padding: 0 10%;
       height: 114px;
-      @include left-top(calc(50% - 344px/2 + 4px), calc(50% - 114px/2 - 975.5px));
+      @include left-top(calc(50% - 344px/2 + 4px), calc(50% - 114px/2 - 975px));
       @extend %font;
 
       text-align: center;
       letter-spacing: -0.03em;
 
       @media (min-width: 767px) {
+        position: absolute;
         @include hw(202px,471px);
         @include left-top(1px,75px);
         @extend %font;
@@ -106,7 +155,7 @@
 }
 
 .item-info {
-  //Krys
+
   position: absolute;
   @include hw(383px, 344px);
   @include left-top(calc(50% - 344px/2 + 4px), calc(290px + 403px * 2));
@@ -120,7 +169,7 @@
     @include hw(608px, 697px);
     @include left-top(661px, 960px);
   }
-  //Anna Palm
+
   &:nth-child(2){
     top: calc(290px );
     @media (min-width: 767px) {
@@ -135,7 +184,7 @@
     }
 
   }
-  //Dejan
+
   &:nth-child(3){
     top: calc(290px + 403px );
     @media (min-width: 767px) {
@@ -149,7 +198,7 @@
       @include left-top(0px, 540px);
     }
   }
-  // Anna N
+
   &:last-child{
     top: calc(290px + 403px * 3);
     @media (min-width: 767px) {
@@ -263,9 +312,9 @@
       @media (min-width: 992px) {
         position: absolute;
         left: 0;
-        right: 53.9%;
-        top: 119.08%;
-        bottom: -32.89%;
+        right: 54%;
+        top: 119%;
+        bottom: -33%;
 
         font-family: 'Inter', sans-serif;
         font-style: normal;
@@ -289,13 +338,13 @@
   }
   &__wider-block{
     position: absolute;
-    left: 71.51%;
-    right: 9.3%;
-    top: 78.33%;
-    bottom: 4.44%;
+    left: 72%;
+    right: 9%;
+    top: 78%;
+    bottom: 4%;
     background: transparent;
 
-    @include hw(1px, calc(310px / 100 * 53));
+    @include hw(1px, calc(310px / 100 * 55));
     @media (min-width: 676px) {
       display: block;
       position: absolute;
@@ -307,10 +356,10 @@
     @media(min-width: 992px){
       display: block;
       position: absolute;
-      left: 68.87%;
-      right: 16.79%;
-      top: 40.86%;
-      bottom: 22.7%;
+      left: 69%;
+      right: 17%;
+      top: 41%;
+      bottom: 23%;
       background: transparent;
 
       @include hw(1px, 310px)
@@ -322,10 +371,10 @@
     @media(min-width: 992px){
       display: block;
       position: absolute;
-      left: 68.87%;
-      right: 16.79%;
-      top: 60.86%;
-      bottom: 22.7%;
+      left: 69%;
+      right: 17%;
+      top: 61%;
+      bottom: 23%;
 
     }
   }
@@ -344,10 +393,10 @@
   }
   &__btn-s{
     position: absolute;
-    left: 71.51%;
-    right: 9.3%;
-    top: 78.33%;
-    bottom: 4.44%;
+    left: 72%;
+    right: 9%;
+    top: 78%;
+    bottom: 4%;
     width: 66px;
     @media(min-width: 767px){
       display: none;
@@ -367,6 +416,7 @@
   overflow: hidden;
   position: relative;
   z-index: 10;
+
 
   &:after{
     content: '';
@@ -400,13 +450,7 @@
 
 
 
-  &:hover{
-    width:calc(310px / 100 * 50);
-    transition: width 0.25s ease-in-out;
-    @media(min-width: 767px){
-      width: 310px;
-    }
-  }
+
 
   & svg{
     position: absolute;
@@ -459,10 +503,6 @@
     -webkit-text-fill-color: transparent;
     transition: opacity 0.3s ease-in-out 0.2s,  text-shadow 0.25s linear ;
     text-shadow: 0 0 0 transparent;
-    @media(min-width: 767px){
-
-    }
-
   }
 
   &:hover &__text{
@@ -485,7 +525,7 @@
   &:after{
     content: '';
     height: 66px;
-    width:calc(310px / 100 * 53);
+    width:calc(310px / 100 * 55);
     position: absolute;
     transform: translateX(-100%);
     background: linear-gradient(58.96deg, #3458e4 4.09%, #af85ee 45.33%, #f59ada 67.93%, #ffc1ce 103.29%);
@@ -512,7 +552,7 @@
   }
 
   &:hover{
-    width:calc(310px / 100 * 53);
+    width:calc(310px / 100 * 55);
     transition: width 0.25s ease-in-out;
   }
 
@@ -616,7 +656,7 @@
   }
 
   &:hover{
-    width:calc(310px / 100 * 60);
+    width:calc(310px / 100 * 63);
     transition: width 0.25s ease-in-out;
   }
 
